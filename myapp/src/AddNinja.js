@@ -5,7 +5,8 @@ class AddNinja extends Component {
    state = {
       name : null,
       age : null,
-      belt : null
+      belt : null,
+      id : null
    }
 
    handleChange = (e) => {
@@ -33,7 +34,7 @@ class AddNinja extends Component {
 
                <label htmlFor="belt">Belt:</label>
                <input type="text" id="belt" onChange={this.handleChange} />
-
+               <input type="hidden" id="id" value={Math.random()}/>
                <button>Submit</button>
             </form>
          </div>
